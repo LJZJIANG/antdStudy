@@ -1,0 +1,10 @@
+@import '~antd/dist/antd.css';
+.app{
+  height: 100vh;
+  .slide-container{
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background: #fff;
+  }
+}
+
