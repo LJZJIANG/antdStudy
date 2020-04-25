@@ -9,35 +9,76 @@ import menuList from '../../config/menu'
 const { SubMenu } = Menu;
 
 class SiderMenu extends React.Component {
-    rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
-
     state = {
-        openKeys: ['sub1'],
+        openKeys: [],
+        selectedKeys: [],
         menuNodes: []
     };
 
     componentDidMount() {
+        this.handleOpenAndSelected(this.props.location.pathname)
         this.setState({
             menuNodes: this.buildMenu(menuList)
         })
     }
 
     onOpenChange = openKeys => {
-        const latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
-        if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-            this.setState({ openKeys });
-        } else {
-            this.setState({
-                openKeys: latestOpenKey ? [latestOpenKey] : [],
-            });
-        }
+        this.setState({ openKeys: openKeys })
     };
 
-    handleToPage(item) {
-        if (item.level === 1 && item.url)
-            this.props.history.push(`${item.url}`)
+    handleMenuClick = (e) => {
+        let menu = this.findMenuByKey(e.key);
+        if (menu && menu.url) {
+            this.props.history.push(`${menu.url}`);
+            this.setState({
+                selectedKeys: [e.key]
+            })
+        }
     }
 
+    // 刷新后设置之前选中的菜单
+    handleOpenAndSelected = (pathname) => {
+        let opens = [];
+        let selecteds = [];
+        const recursion = (items, parents) => {
+            for (const item of items) {
+                if (item.url === pathname) {
+                    selecteds.push(item.customId);
+                    opens = opens.concat(parents);
+                }
+                if (item.items && item.items.length) {
+                    parents.push(item.customId);
+                    recursion(item.items, parents);
+                    parents.pop();
+                }
+            }
+        }
+        recursion(menuList, []);
+        this.setState({
+            selectedKeys: selecteds,
+            openKeys: opens
+        })
+    }
+
+    findMenuByKey = key => {
+        let result = null
+        const recursion = (items) => {
+            for (const item of items) {
+                if (item.customId == key) {
+                    result = item
+                }
+                if (result == null && item.items) {
+                    recursion(item.items)
+                }
+            }
+        }
+        recursion(menuList)
+        return result
+    }
+    /**
+     * 递归渲染菜单 菜单数据
+     * @param {*} items 
+     */
     buildMenu(items) {
         if (!_.isArray(items) || items.length === 0) {
             return null
@@ -51,7 +92,7 @@ class SiderMenu extends React.Component {
                     </SubMenu>
                 )
             } else if (item.level !== 2) {
-                nodes.push(<Menu.Item key={item.customId} onClick={() => { this.handleToPage(item) }}>{item.text}</Menu.Item>)
+                nodes.push(<Menu.Item key={item.customId}>{item.text}</Menu.Item>)
             }
         }
         return nodes
@@ -73,6 +114,8 @@ class SiderMenu extends React.Component {
                 mode="inline"
                 openKeys={this.state.openKeys}
                 onOpenChange={this.onOpenChange}
+                onClick={this.handleMenuClick}
+                selectedKeys={this.state.selectedKeys}
                 style={{ width: 200 }}
             >
                 {this.state.menuNodes}

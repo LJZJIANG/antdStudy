@@ -7,8 +7,8 @@
  */
 import React, { useState } from 'react';
 
-function Order() {
-    return <h1> Order 页面</h1>
+function LogList() {
+    return <h1> 日志列表页面</h1>
 }
 
-export default Order
+export default LogList

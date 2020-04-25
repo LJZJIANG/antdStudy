@@ -7,8 +7,8 @@
  */
 import React, { useState } from 'react';
 
-function Good() {
-    return <h1> Good 页面</h1>
+function RoleList() {
+    return <h1> 角色列表页面</h1>
 }
 
-export default Good
+export default RoleList

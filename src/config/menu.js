@@ -148,7 +148,7 @@ const menuList = [
                 "icon": null,
                 "orderIndex": "2",
                 "module": "角色管理",
-                "url": "/good",
+                "url": "/role",
                 "level": 1,
                 "isSelect": false,
                 "items": [
@@ -259,7 +259,7 @@ const menuList = [
                 "icon": null,
                 "orderIndex": "3",
                 "module": "操作日志管理",
-                "url": "/order",
+                "url": "/log",
                 "level": 1,
                 "isSelect": false,
                 "items": [
@@ -290,7 +290,7 @@ const menuList = [
                 "icon": null,
                 "orderIndex": "4",
                 "module": "api日志管理",
-                "url": "/setting",
+                "url": "/api",
                 "level": 1,
                 "isSelect": false,
                 "items": [

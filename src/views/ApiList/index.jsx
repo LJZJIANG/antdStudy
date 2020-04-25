@@ -7,8 +7,8 @@
  */
 import React, { useState } from 'react';
 
-function Setting() {
-    return <h1> Setting 页面</h1>
+function ApiList() {
+    return <h1> Api列表页面</h1>
 }
 
-export default Setting
+export default ApiList

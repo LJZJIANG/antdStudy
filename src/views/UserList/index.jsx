@@ -3,11 +3,11 @@
  * @Author: ljz
  * @Date: 2020-04-25 09:36:06
  * @LastEditors: ljz
- * @LastEditTime: 2020-04-25 13:57:14
+ * @LastEditTime: 2020-04-25 22:58:44
  */
 import React, { useState, useEffect } from 'react';
 
-function Home(props) {
+function UserList(props) {
 
     useEffect(() => {
         setTimeout(() => {
@@ -16,7 +16,7 @@ function Home(props) {
     }, [])
 
 
-    return (<h1> Home 页面</h1>)
+    return (<h1>用户列表页面</h1>)
 }
 
-export default Home
+export default UserList

@@ -3,10 +3,10 @@
  * @Author: ljz
  * @Date: 2020-04-25 09:26:42
  * @LastEditors: ljz
- * @LastEditTime: 2020-04-25 14:25:41
+ * @LastEditTime: 2020-04-25 20:44:38
  */
 import React from 'react';
-import Router from './router'
+import RouterView from './router'
 import Header from './components/Header/index'
 import SiderMenu from './components/UMemu/index'
 import { BrowserRouter } from 'react-router-dom'
@@ -21,7 +21,7 @@ const App = () => (
     <BrowserRouter>
       <Layout>
         <Sider className="slide-container"><SiderMenu /></Sider>
-        <Content><Router /></Content>
+        <Content><RouterView /></Content>
       </Layout>
     </BrowserRouter>
   </div>
