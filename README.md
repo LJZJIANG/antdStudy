@@ -3,8 +3,7 @@
 > 技术栈：React、React-Router、Ant Design 4.0、Scss
 
 ### [ 在线预览地址----------------->>>>>>>>点我>>>>>>>>> ](https://ljzjiang.github.io/antdStudy)
-[ 在线预览地址----------------->>>>>>>>点我>>>>>>>>> ](https://ljzjiang.github.io/antdStudy)
-这是去往 [本人博客](http://ghosertblog.github.com) 的链接
+<a href="https://ljzjiang.github.io/antdStudy" target="_blank">在线预览地址</a>
 
 ### 安装依赖 `yarn start`
 
