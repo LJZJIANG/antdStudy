@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "87d1df2364d89532ade98d4aa06518c1",
+    "revision": "8f83b721e52fcb5a4bd26ed80e1716b4",
     "url": "/antdStudy/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/antdStudy/static/css/2.cdf5201b.chunk.css"
   },
   {
-    "revision": "709c0a0972ea2a69dede",
+    "revision": "e129b82b6fa069a39a36",
     "url": "/antdStudy/static/css/main.5bcf9fc0.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/antdStudy/static/js/6.05fb157b.chunk.js"
   },
   {
-    "revision": "709c0a0972ea2a69dede",
-    "url": "/antdStudy/static/js/main.b26574d3.chunk.js"
+    "revision": "e129b82b6fa069a39a36",
+    "url": "/antdStudy/static/js/main.25fc4f5e.chunk.js"
   },
   {
     "revision": "cbc2434e948145da39d2",
