@@ -3,13 +3,13 @@
  * @Author: ljz
  * @Date: 2020-04-25 09:26:42
  * @LastEditors: ljz
- * @LastEditTime: 2020-04-26 08:54:47
+ * @LastEditTime: 2020-04-26 11:39:00
  */
 import React from 'react';
 import RouterView from './router'
 import Header from './components/Header/index'
 import SiderMenu from './components/UMemu/index'
-import { BrowserRouter,withRouter } from 'react-router-dom'
+import { BrowserRouter, withRouter } from 'react-router-dom'
 import { Layout } from 'antd';
 
 import './App.scss';

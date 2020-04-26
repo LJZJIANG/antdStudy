@@ -84,7 +84,7 @@ const Login = () => {
 
     const onFinish = values => {
         console.log(values);
-        sessionStorage.setItem('token','adasllasldasldlasd');
+        sessionStorage.setItem('token', 'adasllasldasldlasd');
         window.location.reload();
     };
 
@@ -126,7 +126,6 @@ const Login = () => {
                             },
                         ]}>
                         <Input
-                            // prefix={<Icon type="user" />}
                             placeholder="请输入密码"
                         />
                     </Form.Item>
@@ -141,7 +140,6 @@ const Login = () => {
                             },
                         ]}>
                         <Input
-                            // prefix={<Icon type="user" />}
                             placeholder="请输入验证码"
                         />
                     </Form.Item>
