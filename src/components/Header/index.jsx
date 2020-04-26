@@ -6,7 +6,8 @@ import './index.scss'
 function Header() {
     const handleLoginOut = () => {
         sessionStorage.removeItem('token');
-        window.location.href = window.location.origin;
+        // window.location.href = window.location.origin;
+        window.location.reload(); // 此处为了在GitHub page上演示，所以采用这种方式刷新
     }
     const menu = (<Menu>
         <Menu.Item>

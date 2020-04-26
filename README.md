@@ -2,7 +2,7 @@
 # React管理系统框架
 > 技术栈：React、React-Router、Ant Design 4.0、Scss
 
-### [在线预览地址](https://ljzjiang.github.io/antdStudy/build/index.html)
+### [在线预览地址----------------->>>>>>>>点我>>>>>>>>>](https://ljzjiang.github.io/antdStudy)
 
 ### 安装依赖 `yarn start`
 
