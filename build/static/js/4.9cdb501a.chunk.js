@@ -1,2 +1,0 @@
-(this["webpackJsonpantd-study"]=this["webpackJsonpantd-study"]||[]).push([[4],{320:function(t,n,e){"use strict";e.r(n);var s=e(0),u=e.n(s);n.default=function(){return u.a.createElement("h1",null," \u65e5\u5fd7\u5217\u8868\u9875\u9762")}}}]);
-//# sourceMappingURL=4.9cdb501a.chunk.js.map
