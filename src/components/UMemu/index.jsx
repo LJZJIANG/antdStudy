@@ -3,7 +3,6 @@ import _ from 'lodash';
 import React from 'react';
 import { Menu } from 'antd';
 import * as Icon from '@ant-design/icons';
-import { withRouter } from 'react-router-dom'
 import menuList from '../../config/menu'
 
 const { SubMenu } = Menu;
@@ -124,4 +123,4 @@ class SiderMenu extends React.Component {
     }
 }
 
-export default withRouter(SiderMenu);
+export default SiderMenu;

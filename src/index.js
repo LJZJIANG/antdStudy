@@ -3,16 +3,19 @@
  * @Author: ljz
  * @Date: 2020-04-25 09:26:42
  * @LastEditors: ljz
- * @LastEditTime: 2020-04-25 13:50:38
+ * @LastEditTime: 2020-04-26 10:13:12
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Login from './views/Login';
 import * as serviceWorker from './serviceWorker';
 
+let token = sessionStorage.getItem('token')
+var renderDom = token ? <App /> : <Login />;
 ReactDOM.render(
-    <App />
+  renderDom
   ,
   document.getElementById('root')
 );

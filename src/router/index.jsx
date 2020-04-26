@@ -3,7 +3,7 @@
  * @Author: ljz
  * @Date: 2020-04-25 09:41:05
  * @LastEditors: ljz
- * @LastEditTime: 2020-04-25 23:18:31
+ * @LastEditTime: 2020-04-26 08:47:48
  */
 import React, { lazy, Suspense } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
@@ -48,16 +48,14 @@ const routes = [
 
 const router = () => {
     return (
-        <div>
-            <Switch>
-                <Suspense fallback={<Loading />}>
-                    {routes.map((item => (
-                        <Route key={item.customId} exact path={item.path} component={item.component} />
-                    )))}
-                </Suspense>
-                <Redirect from="/*" to="/" />
-            </Switch>
-        </div>
+        <Switch>
+            <Suspense fallback={<Loading />}>
+                {routes.map((item => (
+                    <Route key={item.customId} exact path={item.path} component={item.component} />
+                )))}
+            </Suspense>
+            <Redirect from="/*" to="/" />
+        </Switch>
     )
 }
 
